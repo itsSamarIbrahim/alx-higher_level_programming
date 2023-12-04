@@ -1,14 +1,22 @@
 #include "lists.h"
 int is_palindrome(listint_t **head)
 {
-	listint *end;
+	listint_t *iteration;
+	int buffer[1024], i, x = 0;
 
-	if (head == NULL || *head == NULL || end == NULL)
-		return (1);
-	if (is_palindrome(head, end->next) && *head->n == end->n)
+	if (head == NULL)
+		return (0);
+
+	iteration = *head;
+	while (iteration != 0)
 	{
-		*head = *head->next;
-		return (1);
+		buffer[x++] = iteration->n;
+		iteration = iteration->next;
 	}
-	return (0);
+	for (i = 0; i < (x / 2); i++)
+	{
+		if (buffer[i] != buffer[x - i - 1])
+			return (0);
+	}
+	return (1);
 }
