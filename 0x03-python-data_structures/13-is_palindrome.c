@@ -1,4 +1,10 @@
 #include "lists.h"
+/**
+ * is_palindrome - checks if a singly linked list is a palindrome
+ * @head: a double pointer to the first value in the list
+ * Return: 1 if it is a palindrome (ON SUCCESS),
+ *		0 if it is not a palindrome (ON FAILURE)
+ */
 int is_palindrome(listint_t **head)
 {
 	listint_t *iteration;
