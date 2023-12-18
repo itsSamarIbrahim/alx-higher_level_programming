@@ -5,8 +5,8 @@ def safe_print_list(my_list=[], x=0):
         for i in range(x):
             print(my_list[i], end='')
             element += 1
-    except:
-        pass # pass or None or break #
+    except IndexError:
+        pass  # pass or None or break #
 
     print("")
     return (element)
