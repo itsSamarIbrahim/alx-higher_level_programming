@@ -7,6 +7,7 @@ class Square:
     def __init__(self, size=0, position=(0, 0)):
         """initializing a new square"""
         self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -52,7 +53,7 @@ class Square:
         if self.__size == 0:
             print("")
         else:
-            for row in range(self.__size):
-                for col in range(self.__size):
-                    print("#", end="")
-                print("")
+            print("\n" * self.__position[1], end="")
+            for i in range(self.__size):
+                print(" " * self.__position[0], end="")
+                print("#" * self.__size)
