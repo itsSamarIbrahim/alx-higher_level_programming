@@ -103,6 +103,7 @@ class Rectangle:
         """Return a string representation of the rectangle for debugging.
 
         Returns:
-            str: A string representing the rectangle in the format "Rectangle(width, height)".
+            str: A string representing the rectangle
+                 in the format "Rectangle(width, height)".
         """
         return f"Rectangle({self.width}, {self.height})"
