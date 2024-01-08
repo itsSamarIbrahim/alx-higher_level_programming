@@ -1,0 +1,60 @@
+========================================
+The ```7-base_geometry``` module
+========================================
+
+Using ```BaseGeometry```
+----------------------------------------
+
+Import the class:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now test it:
+
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+>>> bg.integer_validator("test", 5)
+>>> bg.integer_validator("test", -5)
+Traceback (most recent call last):
+...
+ValueError: <name> must be greater than 0
+>>> bg.integer_validator("test", "string")
+Traceback (most recent call last):
+...
+TypeError: <name> must be an integer
+
+>>> bg2 = BaseGeometry()
+>>> bg2.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+>>> bg2.integer_validator("test", 10)
+>>> bg2.integer_validator("test", 0)
+Traceback (most recent call last):
+...
+ValueError: <name> must be greater than 0
+>>> bg2.integer_validator("test", 3.14)
+Traceback (most recent call last):
+...
+TypeError: <name> must be an integer
+
+>>> bg3 = BaseGeometry()
+>>> bg3.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+>>> bg3.integer_validator("test", 100)
+>>> bg3.integer_validator("test", -100)
+Traceback (most recent call last):
+...
+ValueError: <name> must be greater than 0
+>>> bg3.integer_validator("test", "string")
+Traceback (most recent call last):
+...
+TypeError: <name> must be an integer
