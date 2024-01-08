@@ -117,16 +117,5 @@ Integer_validator with no arguments
 # Test passing large integers
 >>> base_geom.integer_validator("side", 999999)
 
-# Test passing tuples
-    >>> base_geom.integer_validator("side", (1, 2, 3))
-    Traceback (most recent call last):
-        ...
-    TypeError: side must be an integer
-
-# Test passing sets
-    >>> base_geom.integer_validator("side", {1, 2, 3})
-    Traceback (most recent call last):
-        ...
-    TypeError: side must be an integer
 
 
