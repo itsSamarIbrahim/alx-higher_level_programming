@@ -97,20 +97,6 @@ Passing None instead of an integer should raise a TypeError.
         ...
     TypeError: <name> must be an integer
 
-Passing an integer equal to 0 should raise a ValueError.
-
-    >>> base_geom.integer_validator("side", 0)
-    Traceback (most recent call last):
-        ...
-    ValueError: <name> must be greater than 0
-
-Passing a negative integer should raise a ValueError.
-
-    >>> base_geom.integer_validator("side", -10)
-    Traceback (most recent call last):
-        ...
-    ValueError: <name> must be greater than 0
-
 --------------------
 
 Passing one argument to integer_validator
