@@ -113,3 +113,20 @@ Integer_validator with no arguments
           ...
     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
+
+# Test passing large integers
+>>> base_geom.integer_validator("side", 999999)
+
+# Test passing tuples
+    >>> base_geom.integer_validator("side", (1, 2, 3))
+    Traceback (most recent call last):
+        ...
+    TypeError: side must be an integer
+
+# Test passing sets
+    >>> base_geom.integer_validator("side", {1, 2, 3})
+    Traceback (most recent call last):
+        ...
+    TypeError: side must be an integer
+
+
