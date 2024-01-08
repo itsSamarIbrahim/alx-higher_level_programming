@@ -11,6 +11,10 @@ Import the class:
 
 Now test it:
 
+>>> my_list = MyList()
+>>> my_list
+[]
+
 >>> my_list = MyList([3, 1, 2])
 >>> my_list.print_sorted()
 [1, 2, 3]
