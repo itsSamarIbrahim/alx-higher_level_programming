@@ -5,9 +5,11 @@ This is a class Square that inherits from Rectangle class as the base class
 """
 Rectangle = __import__('9-rectangle').Rectangle
 
+
 class Square(Rectangle):
     """
-    A class representing a square, which is a special case of a rectangle where all sides are of equal length.
+    A class representing a square, which is a special case of a rectangle
+    where all sides are of equal length.
 
     Args:
     Rectangle (class): The base class for rectangles.
