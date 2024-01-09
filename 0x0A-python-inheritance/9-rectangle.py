@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Module: 9-rectangle
+a class Rectangle that inherits from BaseGeometry
+"""
 
 
 class Rectangle(BaseGeometry):
