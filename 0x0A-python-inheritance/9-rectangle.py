@@ -41,8 +41,8 @@ class Rectangle(BaseGeometry):
         Calculate the area of the rectangle.
 
         Returns:
-        int: The area of the rectangle calculated as the product of its
-        width and height.
+        int: The area of the rectangle calculated as the product of its width
+        and height.
         """
         return self.__width * self.__height
 
@@ -51,7 +51,7 @@ class Rectangle(BaseGeometry):
         Calculate the area of the rectangle.
 
         Returns:
-        int: The area of the rectangle calculated as the product
-        of its width and height.
+        int: The area of the rectangle calculated as the product of its width
+        and height.
         """
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
