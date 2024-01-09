@@ -32,18 +32,18 @@ Passing a non-integer should raise a TypeError.
     >>> base_geom.integer_validator("side", "5")
     Traceback (most recent call last):
         ...
-    TypeError: <name> must be an integer
+    TypeError: side must be an integer
 
 Passing an integer less than or equal to 0 should raise a ValueError.
 
     >>> base_geom.integer_validator("side", -5)
     Traceback (most recent call last):
         ...
-    ValueError: <name> must be greater than 0
+    ValueError: side must be greater than 0
     >>> base_geom.integer_validator("side", 0)
     Traceback (most recent call last):
         ...
-    ValueError: <name> must be greater than 0
+    ValueError: side must be greater than 0
 
 Testing the 'integer_validator' method of BaseGeometry class.
 
@@ -53,49 +53,49 @@ Passing a string instead of an integer should raise a TypeError.
     >>> base_geom.integer_validator("side", "string")
     Traceback (most recent call last):
         ...
-    TypeError: <name> must be an integer
+    TypeError: side must be an integer
 
 Passing a float instead of an integer should raise a TypeError.
 
     >>> base_geom.integer_validator("side", 3.14)
     Traceback (most recent call last):
         ...
-    TypeError: <name> must be an integer
+    TypeError: side must be an integer
 
 Passing a complex number instead of an integer should raise a TypeError.
 
     >>> base_geom.integer_validator("side", 1+2j)
     Traceback (most recent call last):
         ...
-    TypeError: <name> must be an integer
+    TypeError: side must be an integer
 
 Passing a boolean instead of an integer should raise a TypeError.
 
     >>> base_geom.integer_validator("side", True)
     Traceback (most recent call last):
         ...
-    TypeError: <name> must be an integer
+    TypeError: side must be an integer
 
 Passing a list instead of an integer should raise a TypeError.
 
     >>> base_geom.integer_validator("side", [1, 2, 3])
     Traceback (most recent call last):
         ...
-    TypeError: <name> must be an integer
+    TypeError: side must be an integer
 
 Passing a dictionary instead of an integer should raise a TypeError.
 
     >>> base_geom.integer_validator("side", {'one': 1})
     Traceback (most recent call last):
         ...
-    TypeError: <name> must be an integer
+    TypeError: side must be an integer
 
 Passing None instead of an integer should raise a TypeError.
 
     >>> base_geom.integer_validator("side", None)
     Traceback (most recent call last):
         ...
-    TypeError: <name> must be an integer
+    TypeError: side must be an integer
 
 --------------------
 
