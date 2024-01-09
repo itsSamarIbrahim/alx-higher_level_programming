@@ -11,8 +11,8 @@ Public instance method: def integer_validator(self, name, value):
         with the message <name> must be an integer
     if value is less or equal to 0: raise a ValueError exception
         with the message <name> must be greater than 0
-This is a rectangle class that inherit the BaseGeometry
-from the BaseGeometry class
+This is a rectangle class that inherit the BaseGeometry from
+the BaseGeometry class
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
@@ -52,6 +52,7 @@ class BaseGeometry:
             raise TypeError("<name> must be an integer")
         if value <= 0:
             raise ValueError("<name> must be greater than 0")
+
 
 class Rectangle(BaseGeometry):
     """
