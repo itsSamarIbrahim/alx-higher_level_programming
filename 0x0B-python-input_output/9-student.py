@@ -21,7 +21,8 @@ class Student:
 
     def to_json(self):
         """
-        Returns a dictionary representation of the student for JSON serialization.
+        Returns a dictionary representation of the student
+        for JSON serialization.
 
         Returns:
         dict: A dictionary containing the student's data.
