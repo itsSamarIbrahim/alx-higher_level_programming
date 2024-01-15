@@ -81,10 +81,10 @@ class Square(Rectangle):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)"""
-        if args:  # If *args exists and is not empty
+        if args:
             attrs = ["id", "size", "x", "y"]
             for i, arg in enumerate(args):
                 setattr(self, attrs[i], arg)
-        else:  # If *args is empty or doesn't exist
+        else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
