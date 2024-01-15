@@ -115,7 +115,6 @@ class Rectangle(Base):
         """
         return self.width * self.height
 
-
     def display(self):
         """
         Display the rectangle as a series of '#' characters
