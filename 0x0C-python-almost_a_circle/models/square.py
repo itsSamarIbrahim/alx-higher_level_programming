@@ -67,7 +67,7 @@ class Square(Rectangle):
             **kwargs: Arbitrary keyword arguments.
             Each key represents an attribute to be updated.
         """
-       """ if args is not None and len(args) != 0:
+        """ if args is not None and len(args) != 0:
             if len(args) > 0:
                 self.id = args[0]
             if len(args) > 1:
