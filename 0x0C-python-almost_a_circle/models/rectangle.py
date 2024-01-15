@@ -141,7 +141,7 @@ class Rectangle(Base):
 
         Args:
             *args: Variable number of arguments in the order
-	    (id, width, height, x, y).
+            (id, width, height, x, y).
         """
         if len(args) > 0:
             self.id = args[0]
