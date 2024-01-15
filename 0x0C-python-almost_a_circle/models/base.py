@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-model-1
+model Base
 """
 import json
 
@@ -98,3 +98,22 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Loads a list of instances from a file in JSON format.
+
+        Returns:
+            list:
+            List of instances loaded from the file.
+            If the file doesn't exist, returns an empty list.
+        """
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename, 'r', encoding="UTF-8") as File:
+                json_string = File.read()
+                list_dicts = cls.from_json_string(json_string)
+                return [cls.create(**d) for d in list_dicts]
+        except FileNotFoundError:
+            return []
