@@ -57,7 +57,8 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """
-        Update the square's attributes based on the provided arguments and keyworded arguments.
+        Update the square's attributes based on
+        the provided arguments and keyworded arguments.
 
         Args:
             *args: Variable length argument list.
@@ -66,7 +67,7 @@ class Square(Rectangle):
             **kwargs: Arbitrary keyword arguments.
             Each key represents an attribute to be updated.
         """
-        if args is not None and len(args) != 0:
+       """ if args is not None and len(args) != 0:
             if len(args) > 0:
                 self.id = args[0]
             if len(args) > 1:
@@ -78,5 +79,12 @@ class Square(Rectangle):
             if len(args) > 4:
                 self.y = args[4]
         else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)"""
+        if args:  # If *args exists and is not empty
+            attrs = ["id", "size", "x", "y"]
+            for i, arg in enumerate(args):
+                setattr(self, attrs[i], arg)
+        else:  # If *args is empty or doesn't exist
             for key, value in kwargs.items():
                 setattr(self, key, value)
