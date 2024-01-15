@@ -60,3 +60,19 @@ class Base:
             json.data = [obj.to_dictionary() for obj in list_objs]
             json.string = cls.to_json_string(json.data)
             File.write(json.string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Returns the list represented by the JSON string.
+
+        Args:
+            json_string (str): A JSON string.
+
+        Returns:
+            list: The list represented by the JSON string.
+        """
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
