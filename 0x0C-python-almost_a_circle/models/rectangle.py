@@ -118,10 +118,12 @@ class Rectangle(Base):
     def display(self):
         """
         Display the rectangle as a series of '#' characters
-        based on its width and height.
+        based on its width and height at the specified position.
         """
+        for i in range(self.y):
+            print()
         for i in range(self.height):
-            print('#' * self.width)
+            print(" " * self.x + '#' * self.width)
 
     def __str__(self):
         """
