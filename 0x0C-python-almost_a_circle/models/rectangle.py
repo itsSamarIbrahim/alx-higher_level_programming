@@ -1,6 +1,13 @@
 #!/usr/bin/python3
 """
-A class to represent a rectangle.
+model Rectangle
+"""
+from models.base import Base
+
+
+class Rectangle(Base):
+    """
+    A class to represent a rectangle.
 
     Attributes
     ----------
@@ -19,13 +26,10 @@ A class to represent a rectangle.
     -------
     __init__(width, height, x=0, y=0, id=None)
         Constructs all the necessary attributes for the rectangle.
-"""
-from models.base import Base
-
-
-class Rectangle(Base):
     """
-    Constructs all the necessary attributes for the rectangle.
+    def __init__(self, width, height, x=0, y=0, id=None):
+        """
+	Constructs all the necessary attributes for the rectangle.
 
         Parameters
         ----------
@@ -39,13 +43,12 @@ class Rectangle(Base):
             The y-coordinate of the rectangle's position.
         id : int, optional
             The unique identifier of the rectangle.
-    """
-    def __init__(self, width, height, x=0, y=0, id=None):
+	"""
+        super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
-        super().__init__(id)
 
     @property
     def width(self):
