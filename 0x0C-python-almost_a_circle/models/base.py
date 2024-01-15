@@ -121,6 +121,15 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        """
+        Serializes a list of objects to a CSV file.
+
+        Args:
+            list_objs (list): A list of objects to be serialized.
+
+        Returns:
+            None
+        """
         filename = __name__ + ".csv"
         with open(filename, 'w', newline='', encoding="UTF-8") as File:
             writer = csv.writer(File)
@@ -134,6 +143,12 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
+        """
+        Deserializes a CSV file to a list of instances.
+
+        Returns:
+            list: A list of instances deserialized from the CSV file.
+        """
         filename = __name__ + ".csv"
         try:
             with open(filename, 'r', newline='', encoding="UTF-8") as File:
