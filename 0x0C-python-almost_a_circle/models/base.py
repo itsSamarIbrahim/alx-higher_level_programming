@@ -135,8 +135,8 @@ class Base:
             writer = csv.writer(File)
             if cls.__name__ == "Rectangle":
                 for obj in list_objs:
-                    writer.writerow([obj.id, obj.width, \
-                    obj.height, obj.x, obj.y])
+                    writer.writerow([obj.id, obj.width,
+                                     obj.height, obj.x, obj.y])
             elif cls.__name__ == "Square":
                 for obj in list_objs:
                     writer.writerow([obj.id, obj.width, obj.x, obj.y])
@@ -156,9 +156,11 @@ class Base:
                 instances = []
                 for row in reader:
                     if cls.__name__ == "Rectangle":
-                        instance = cls(int(row[0]), int(row[1]), int(row[2]), int(row[3]), int(row[4]))
+                        instance = cls(int(row[0]), int(row[1]),
+                                       int(row[2]), int(row[3]), int(row[4]))
                     elif cls.__name__ == "Square":
-                        instance = cls(int(row[0]), int(row[1]), int(row[2]), int(row[3]))
+                        instance = cls(int(row[0]), int(row[1]),
+                                       int(row[2]), int(row[3]))
                     instances.append(instance)
                 return instances
         except FileNotFoundError:
