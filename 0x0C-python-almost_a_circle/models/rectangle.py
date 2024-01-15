@@ -29,7 +29,7 @@ class Rectangle(Base):
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-	Constructs all the necessary attributes for the rectangle.
+        Constructs all the necessary attributes for the rectangle.
 
         Parameters
         ----------
@@ -43,7 +43,7 @@ class Rectangle(Base):
             The y-coordinate of the rectangle's position.
         id : int, optional
             The unique identifier of the rectangle.
-	"""
+        """
         super().__init__(id)
         self.__width = width
         self.__height = height
