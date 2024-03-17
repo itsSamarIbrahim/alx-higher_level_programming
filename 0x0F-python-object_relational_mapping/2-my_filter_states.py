@@ -15,7 +15,7 @@ db = MySQLdb.connect(host='localhost',
 
 cursor = db.cursor()
 state_name = sys.argv[4]
-query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(
+query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC".format(
     state_name)
 cursor.execute(query)
 
