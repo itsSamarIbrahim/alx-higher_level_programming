@@ -12,10 +12,10 @@ if __name__ == "__main__":
         letter = sys.argv[1]
     url = "http://0.0.0.0:5000/search_user"
     params = {'q': letter}
-    response = requests.post(url, data=params)
+    req = requests.post("http://0.0.0.0:5000/search_user", data=params)
     try:
-        data = response.json()
-        if data:
+        response = req.json()
+        if response:
             print("[{}] {}".format(response.get("id"), response.get("name")))
         else:
             print("No result")
