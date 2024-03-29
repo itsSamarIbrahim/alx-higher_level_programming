@@ -11,7 +11,6 @@ if __name__ == "__main__":
     else:
         letter = sys.argv[1]
     url = "http://0.0.0.0:5000/search_user"
-    letter = sys.argv[1]
     params = {'q': letter}
     response = requests.post(url, data=params)
     try:
