@@ -117,4 +117,3 @@ Integer_validator with no arguments
 # Test passing large integers
 >>> base_geom.integer_validator("side", 999999)
 
-
