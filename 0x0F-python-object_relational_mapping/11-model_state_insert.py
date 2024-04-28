@@ -30,3 +30,7 @@ if __name__ == '__main__':
     new_state = session.query(State).filter(State.name == 'Louisiana').first()
 
     session.commit()
+
+    print("{}".format(new_state.id))
+
+    session.close()
