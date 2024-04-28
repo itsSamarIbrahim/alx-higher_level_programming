@@ -8,8 +8,6 @@ from sqlalchemy import Column
 from sqlalchemy import Integer
 from sqlalchemy import String
 from sqlalchemy.orm import relationship
-from relationship_city import Base
-from relationship_city import City
 
 Base = declarative_base()
 
