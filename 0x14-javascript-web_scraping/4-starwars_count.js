@@ -5,6 +5,7 @@ const request = require('request');
 
 const apiUrl = process.argv[2];
 
+let count = 0;
 request(apiUrl, (error, response, body) => {
   if (error) {
     console.error(error);
@@ -12,9 +13,12 @@ request(apiUrl, (error, response, body) => {
 
   const data = JSON.parse(body);
 
-  const wedgeId = '18';
-
-  const wedgeMoivesCount = data.results.filter(moive => movie.characters.includes(`https://swapi-api.alx-tools.com/api/people/${wedgeId}`)).length;
-
-  console.log(wedgeMoivesCount);
+  for (const movie of data.results) {
+    for  (const line of movie.characters) {
+      if (line.endsWith('18/')) {
+        count++;
+      }
+    }
+  }
+  console.log(count);
 });
