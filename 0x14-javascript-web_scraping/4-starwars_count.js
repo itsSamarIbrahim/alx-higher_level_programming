@@ -14,7 +14,7 @@ request(apiUrl, (error, response, body) => {
   const data = JSON.parse(body);
 
   for (const movie of data.results) {
-    for  (const line of movie.characters) {
+    for (const line of movie.characters) {
       if (line.endsWith('18/')) {
         count++;
       }
